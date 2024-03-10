@@ -1,9 +1,12 @@
 import { useState } from 'react';
 
-export default function AuthInputs() {
+export default function AuthInputs({onSubmit}) {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  
+  const emailNotValid = submitted && !enteredEmail.includes('@');
+  const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   function handleInputChange(identifier, value) {
     if (identifier === 'email') {
@@ -15,10 +18,10 @@ export default function AuthInputs() {
 
   function handleLogin() {
     setSubmitted(true);
+    if(submitted && !emailNotValid && !passwordNotValid){
+      onSubmit();
+    }
   }
-
-  const emailNotValid = submitted && !enteredEmail.includes('@');
-  const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
     <div id="auth-inputs">

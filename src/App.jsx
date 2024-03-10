@@ -1,14 +1,19 @@
+import { useState } from 'react';
 import AuthInputs from './components/AuthInputs.jsx';
-import Header from './components/Header.jsx';
 import Penguin from './components/Penguin/Penguin.jsx';
 
 export default function App() {
+  const [loggedIn, setLogIn] = useState(false);
+
+  function handleSubmit(){
+    setLogIn(true);
+  }
+
   return (
     <>
-      <Header />
       <main>
-        {/* <AuthInputs /> */}
-        <Penguin/>
+        {!loggedIn && <AuthInputs onSubmit={()=> handleSubmit()}/>}
+        {loggedIn &&  <Penguin/>}
       </main>
     </>
   );
