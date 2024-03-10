@@ -7,7 +7,7 @@
 }
 
 .penguin {
-    --penguin-skin: black;
+    --penguin-skin: #515151;
     --penguin-belly: white;
     --penguin-beak: orange;
 
@@ -195,18 +195,17 @@
 }
 
 .container {
-    max-width: 800px;
-    margin: auto 5em;
+    margin: auto;
     width: 100%;
     align-items: center;
-    /* border: 1px solid var(--dark-divider); */
     padding: 3em;
-    height: 559px;
+    height: 560px;
     box-sizing: border-box;
     max-width: 660px;
     display: flex;
     flex-direction: column;
-    /* background-color: var(--light-secondary-background); */
+    background: #d2f0ffe8;
+    border-radius: 95px;
 }
 
 

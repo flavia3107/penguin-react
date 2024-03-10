@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import AuthInputs from './components/AuthInputs.jsx';
+import AuthInputs from './components/AuthInputs/AuthInputs.jsx';
 import Penguin from './components/Penguin/Penguin.jsx';
 
 export default function App() {

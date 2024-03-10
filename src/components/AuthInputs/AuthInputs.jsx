@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import cssStyle from './AuthInputs.module.css';
 
 export default function AuthInputs({onSubmit}) {
   const [enteredEmail, setEnteredEmail] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
   const [submitted, setSubmitted] = useState(false);
   
-  const emailNotValid = submitted && !enteredEmail.includes('@');
-  const passwordNotValid = submitted && enteredPassword.trim().length < 6;
+  const emailValid = enteredEmail.includes('@');
+  const passwordValid = enteredPassword.trim().length >= 6;
 
   function handleInputChange(identifier, value) {
     if (identifier === 'email') {
@@ -18,19 +19,20 @@ export default function AuthInputs({onSubmit}) {
 
   function handleLogin() {
     setSubmitted(true);
-    if(submitted && !emailNotValid && !passwordNotValid){
+
+    if(emailValid && passwordValid){
       onSubmit();
     }
   }
 
   return (
-    <div id="auth-inputs">
-      <div className="controls">
+    <div className={cssStyle.auth_inputs}>
+      <div className={cssStyle.controls}>
         <p>
           <label>Email</label>
           <input
             type="email"
-            className={emailNotValid ? 'invalid' : undefined}
+            className={submitted && !emailValid ? cssStyle.invalid : undefined}
             onChange={(event) => handleInputChange('email', event.target.value)}
           />
         </p>
@@ -38,18 +40,19 @@ export default function AuthInputs({onSubmit}) {
           <label>Password</label>
           <input
             type="password"
-            className={passwordNotValid ? 'invalid' : undefined}
+            className={submitted && !passwordValid ? cssStyle.invalid : undefined}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
           />
+          <span className={cssStyle.hint}>Password must have 6 characters or more.</span>
         </p>
       </div>
-      <div className="actions">
-        <button type="button" className="text-button">
+      <div className={cssStyle.actions}>
+        <button type="button" className={cssStyle.text_button}>
           Create a new account
         </button>
-        <button className='button' onClick={handleLogin}>Sign In</button>
+        <button className={cssStyle.button} onClick={handleLogin}>Sign In</button>
       </div>
     </div>
   );
