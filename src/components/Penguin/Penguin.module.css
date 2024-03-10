@@ -19,7 +19,7 @@
     z-index: 999;
 }
 
-.penguin-top {
+.penguin_top {
     top: 10%;
     left: 25%;
     background: var(--penguin-skin, gray);
@@ -28,7 +28,7 @@
     border-radius: 70% 70% 60% 60%;
 }
 
-.penguin-bottom {
+.penguin_bottom {
     top: 40%;
     left: 23.5%;
     background: var(--penguin-skin, gray);
@@ -37,7 +37,7 @@
     border-radius: 70% 70% 100% 100%;
 }
 
-.right-hand {
+.right_hand {
     top: 11%;
     left: 16%;
     background: var(--penguin-skin, gray);
@@ -53,7 +53,7 @@
     animation-timing-function: linear;
 }
 
-.left-hand {
+.left_hand {
     top: 0%;
     left: 75%;
     background: var(--penguin-skin, gray);
@@ -64,7 +64,7 @@
     z-index: -1;
 }
 
-.right-cheek {
+.right_cheek {
     top: 15%;
     left: 35%;
     background: var(--penguin-belly, white);
@@ -73,7 +73,7 @@
     border-radius: 70% 70% 60% 60%;
 }
 
-.left-cheek {
+.left_cheek {
     top: 15%;
     left: 5%;
     background: var(--penguin-belly, white);
@@ -91,7 +91,7 @@
     border-radius: 120% 120% 100% 100%;
 }
 
-.right-feet {
+.right_feet {
     top: 85%;
     left: 60%;
     background: var(--penguin-beak, orange);
@@ -102,7 +102,7 @@
     z-index: -2222;
 }
 
-.left-feet {
+.left_feet {
     top: 85%;
     left: 25%;
     background: var(--penguin-beak, orange);
@@ -113,7 +113,7 @@
     z-index: -2222;
 }
 
-.right-eye {
+.right_eye {
     top: 45%;
     left: 60%;
     background: black;
@@ -122,7 +122,7 @@
     border-radius: 50%;
 }
 
-.left-eye {
+.left_eye {
     top: 45%;
     left: 25%;
     width: 15%;
@@ -140,7 +140,7 @@
     border-radius: 50%;
 }
 
-.blush-right {
+.blush_right {
     top: 65%;
     left: 15%;
     background: pink;
@@ -149,7 +149,7 @@
     border-radius: 50%;
 }
 
-.blush-left {
+.blush_left {
     top: 65%;
     left: 70%;
     background: pink;
@@ -158,7 +158,7 @@
     border-radius: 50%;
 }
 
-.beak-top {
+.beak_top {
     top: 60%;
     left: 40%;
     background: var(--penguin-beak, orange);
@@ -167,7 +167,7 @@
     border-radius: 50%;
 }
 
-.beak-bottom {
+.beak_bottom {
     top: 65%;
     left: 42%;
     width: 16%;
