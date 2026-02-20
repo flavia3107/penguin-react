@@ -88,10 +88,11 @@ button:focus {
     color: #ffb349;
 }
 
-.hint{
+.hint {
     font-size: 11px;
     color: gray;
     letter-spacing: 1px;
     margin-top: 10px;
     display: inline-block;
+    font-family: "DejaVu Sans", "sans";
 }
